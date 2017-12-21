@@ -21,4 +21,6 @@ Directives / components / controllers / localstorage / css
 enjoy!
 
 ![alt text](https://github.com/Abdalla1990/Todo---AngularJs/blob/master/src/asset/img/Screen%20Shot%202017-12-20%20at%2010.27.53%20PM.png "")
+![alt text](https://github.com/Abdalla1990/Todo---AngularJs/blob/master/src/asset/img/Screen%20Shot%202017-12-20%20at%2010.28.12%20PM.png "")
+![alt text](https://github.com/Abdalla1990/Todo---AngularJs/blob/master/src/asset/img/Screen%20Shot%202017-12-20%20at%2010.28.25%20PM.png "")
 
