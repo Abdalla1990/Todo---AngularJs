@@ -1,0 +1,124 @@
+
+
+   <div class="container">
+
+    <ul class="nav nav-tabs">
+            <li class="nav-item">
+                    <a class="nav-link active" data-toggle="tab" href="#todos">Todos</a>
+            </li>
+            <li class="nav-item">
+                    <a class="nav-link active" data-toggle="tab" href="#actions">Actions</a>
+            </li>
+
+    </ul>
+    <div id="myTabContent" class="tab-content" >
+
+            <div  class="tab-pane fade active show" id="todos" >
+                <div class="jumbotron row">
+
+                        <div  ng-repeat="todo in todos track by $index">
+
+                            <div class="cards-container">
+
+                                <div class="card text-white bg-info mb-3" style="max-width: 20rem;" > 
+                                        
+                                    <h2 class="card-header column">{{todo.title}}</h2>
+                                        
+                                    <div class="card-body">
+
+                                        <span class="row">
+
+                                            <label class="card-title" for="created at">Created At  </label>
+                                            <p class="card-text" >{{todo.createdAt}}</p>
+
+                                        </span>
+                                           
+                                        <span  class="row editedAt" ng-show="todo.edittedAt">
+
+                                               <label class="card-title" for="created at">Edited At</label>
+                                               <p class="card-text" >{{todo.edittedAt}}</p>
+                                               
+                                          </span>
+                                          
+                                               
+                                               
+                                           <div class="items">
+                                                
+                                                <h3>Items</h3>
+                                                
+                                                <div class="list-group list-group-flush"  ng-repeat="item in todo.items">
+                                                   
+                                                   <div class="list-group-item">
+
+                                                       <span>
+                                                           <p>{{item.name}}</p>
+                                                       </span>
+
+                                                       <span>
+                                                           <p>{{item.description}}</p>
+                                                       </span>
+
+                                                    </div>
+                                                       
+                                               </div>      
+                                               
+                                           </div>
+                                    </div>
+                                   
+                            
+                                    <div class="modal-footer">
+                                           <button class="btn btn-primary" ng-click="editTodo(todo)" data-toggle="tab" href="#actions" >Edit Todo</button>
+                                           <button class="btn btn-primary" ng-click ="removeTodo(todo)">Remove Todo</button>
+                                    </div>
+                                   
+                                       
+                                </div> 
+
+                            </div>
+
+                        </div>                
+                </div>
+                 
+                
+            </div>
+             <div class="tab-pane fade  show" id="actions">
+
+                <div class="jumbotron">
+                    <div class="display-3">
+                            <button class="btn btn-primary" ng-show="!showAddForm" ng-click="showAddForm = true">Add A Todo</button> 
+                            <button class="btn btn-primary" ng-show="showAddForm" ng-click="showAddForm = false">Hide</button>
+                    </div>
+                    <div ng-show="showAddForm" >                 
+                        <form  class="form-group"  novalidate>
+                            <div>
+                                <div>
+                                    <p class="text-danger" ng-show="edittingMode">Editting mode is on !</p>
+                                    <label class="control-label display-3" for="validationServer01">title</label>
+                                    <input class="form-control" ng-model = "title" type="text" placeholder="todo title" required>
+                                </div>
+                                <div>
+                                    <button class="btn btn-primary" ng-click="showItemDirective = true ">Add Items To your Todos</button>
+                                </div>
+                                <div ng-show="showItemDirective">
+                                    <new-item update-items="updateItems(data)"></new-item>
+                                </div>
+                                    <button class="btn btn-primary" ng-show="!edittingMode" ng-click="addTodo()">Add Todo</button>
+                                    <button href="#todos" class="btn btn-primary" ng-show="edittingMode" ng-click="saveEditting()" >Save Edit</button>
+                                </div>
+                        </form>
+                    </div>
+                </div>
+             </div>
+             
+         
+           
+    </div>
+        
+     
+
+   </div>
+    
+          
+    
+    
+

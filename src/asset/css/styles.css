@@ -1,0 +1,111 @@
+.container{
+    font-family: Arial, Helvetica, sans-serif;
+}
+.search-box{
+    background-color: #375a7f;
+    color: white;
+    height: 45px;
+    width: 100%;
+    text-align: center;
+    border:solid rgb(87, 80, 99) 1.5px;
+    /* margin-left: 25%; */
+   
+}
+.a-jumbotron{
+   
+    display: block;
+    align-content: center;
+}
+.jumbotron .control-label .display-3{
+    text-align: left;
+}
+
+.card {
+ max-width: 100px;
+ min-width: 300px;
+ min-height: 500px;
+ margin: 10px;
+}
+.card-header{
+    font-size: 15px;
+    word-break: break-all;
+    text-align: center;
+}
+
+.card-body{
+    min-height: 300px;
+    align-content: center;
+    border-bottom: solid rgb(87, 80, 99) 1.5px;
+}
+.card-text {
+    padding-left: 50px;
+}
+.card-title{
+    padding-left: 15px; 
+}
+.items{
+    top: 30%;
+}
+
+.items-title{
+    text-align: center;
+}
+
+.itemsList{
+    padding: 15px;
+    border-bottom: solid rgb(87, 80, 99) 1.5px;
+}
+.add-item-button{
+    padding: 5px;
+    margin-left: 45%;
+
+}
+.display-3{
+text-align: center;
+padding: 15px;
+}
+.task-item{
+    padding: 15px;
+}
+.save-button{
+  margin: 0 0 0 15px ;
+}
+
+.card-footer{
+
+    padding: 15px;
+    color: rgb(117, 115, 122);
+}
+
+.a-row {
+    display: block;
+    width: 100%;
+    display: flex;
+    flex-wrap : nowrap;
+
+}
+
+.a-row-around {
+    justify-content: space-around;
+}
+.btn-primary{
+    border: solid rgb(206, 204, 209) 1px;
+}
+
+.frame{
+    display: block;
+    width: 100%;
+    align-content: center;
+    text-align: center;
+    border:solid rgb(87, 80, 99) 1.5px;
+
+}
+
+.a-frame{
+    justify-content: space-between;
+    display: flex;
+    flex-wrap : nowrap;
+    width: 100%;
+    border: none;
+}
+

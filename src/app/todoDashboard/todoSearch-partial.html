@@ -1,0 +1,12 @@
+<div class="a-jumbotron column">
+
+    <input class="form-control search-box" ng-model="search" type="text" placeholder="Search">
+    <label for="filter">filter by</label>
+    <select class="search-box" ng-model="selectedFilter">
+            <option value=""></option>
+            <option value="completed">completed</option>
+            <option value="incompleted">incompleted</option>
+        </select>
+    <button ng-click="setFilter(selectedFilter)">Apply</button>
+
+</div>

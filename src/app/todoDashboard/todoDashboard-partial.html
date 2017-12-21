@@ -1,0 +1,43 @@
+<div class="container">
+
+    <ul class="nav nav-tabs">
+        <li class="nav-item">
+            <a class="nav-link active" href="/">Todos</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link active" href="/editor">Add Todo</a>
+        </li>
+
+    </ul>
+    <p class="display-3"> Welcome To your Todo List </p>
+    <div ng-show="showHints">
+
+        <a class="badge badge-primary" href="/editor">Create A Todo</a>
+    </div>
+    <div id="myTabContent" class="tab-content">
+
+        <div class="tab-pane fade active show">
+
+            <todo-search filter="filterTodos(filter)"></todo-search>
+            <div class="jumbotron row">
+
+
+                <div ng-repeat="todo in todoList">
+
+                    <todo-list-item completed="completed(todo)" delete="delete(todo)" data="todo"></todo-list-item>
+
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+
+
+</div>

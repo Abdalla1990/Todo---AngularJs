@@ -1,0 +1,60 @@
+<div class="cards-container">
+
+
+    <div class="card text-white bg-info mb-3" style="max-width: 20rem;">
+
+        <h2 class="card-header column">{{$ctrl.todo.title}}</h2>
+
+        <div class="card-body">
+
+            <h4 class="items-title" ng-show="$ctrl.todo.completed" style="color:rgb(129, 3, 3);">Completed</h4>
+
+            <div class="items">
+
+                <h3 class="items-title">Items</h3>
+
+                <div class="list-group list-group-flush" ng-repeat="item in $ctrl.todo.items">
+
+                    <div class="list-group-item">
+
+                        <span>
+                               <p>{{item.name}}</p>
+                           </span>
+
+                        <span>
+                               <p>{{item.description}}</p>
+                           </span>
+
+                        <span>
+                                <p ng-click="$ctrl.showFrame(item.url)">{{item.url}}</p>
+                            </span>
+
+                    </div>
+
+                </div>
+
+                <div ng-show="$ctrl.todo.items[0].url">
+                    <frame-item class="frame" data="$ctrl.url"></frame-item>
+                </div>
+
+
+
+            </div>
+        </div>
+
+
+        <div class="card-footer">
+
+            <div class="a-row a-row-around " id="row">
+                <a id="left" class="btn btn-primary" href="/editor/{{$ctrl.todo.id}}" disabled>Edit</a>
+                <button id="middle" class="btn btn-primary" ng-click="$ctrl.delete(todo)">Remove</button>
+                <button id="right" class="btn btn-primary" ng-click="$ctrl.completed(todo)">completed</button>
+            </div>
+
+        </div>
+
+
+
+    </div>
+
+</div>
